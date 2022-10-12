@@ -6,69 +6,132 @@ int main()
     //creacion de la cara del pollo
     sf::CircleShape face(100.f); //tamaño
     face.setRadius(235);
-    face.setPointCount(100);
-    face.setFillColor(sf::Color::Green);//color
-    face.setPosition(80.f, 2.f);//posicion 80 es de la izquierda y 2 es de arriba
-    face.move(5.f, 5.f);
-    sf::Vector2f position = face.getPosition();
+    face.setFillColor(sf::Color::Yellow);//color
+    face.setPosition(80.f, 2.f);
 
-    //creacion del ojo izquierdo 
-    sf::CircleShape ojoizq(50);
-    ojoizq.setRadius(100);
-    ojoizq.setPointCount(50);
-    ojoizq.setFillColor(sf::Color::Black);//color
-    ojoizq.setPosition(80.f, 2.f);//posicion 80 es de la izquierda y 2 es de arriba
-    ojoizq.move(5.f, 5.f);
-    sf::Vector2f position = ojoizq.getPosition();
+    //creacion del ojo izquierdo
+    sf::RectangleShape rectangleizq(sf::Vector2f(120, 80.f));
+    rectangleizq.setFillColor(sf::Color::Black);
+    rectangleizq.setSize(sf::Vector2f(100, 100));
+    rectangleizq.setPosition(178, 100);
+    sf::CircleShape ojoizq(29);//creacion de la pupila
+    ojoizq.setFillColor(sf::Color::White);//color
+    ojoizq.setPosition(200, 115);//x,y
+
+    //Creacion del chapeteizq
+    sf::RectangleShape chapiz(sf::Vector2f(120, 80.f));
+    chapiz.setFillColor(sf::Color::Magenta);
+    chapiz.setSize(sf::Vector2f(54, 54));
+    chapiz.setPosition(140, 174);
 
     //creacion del ojo derecho 
-    sf::CircleShape ojodere(50);
-    ojodere.setRadius(100);
-    ojodere.setPointCount(50);
-    ojodere.setFillColor(sf::Color::Black);//color
-    ojodere.setPosition(200.f, 4.f);//posicion 80 es de la izquierda y 2 es de arriba
-    ojodere.move(5.f, 5.f);
-    sf::Vector2f position = ojodere.getPosition();
-    
+    sf::RectangleShape rectangledere(sf::Vector2f(120, 80.f));
+    rectangledere.setFillColor(sf::Color::Black);
+    rectangledere.setSize(sf::Vector2f(100, 100));
+    rectangledere.setPosition(346, 100);
+    sf::CircleShape ojodere(29); //creacion de la pupila
+    ojodere.setFillColor(sf::Color::White);//color    
+    ojodere.setPosition(365, 115);
+
+    //Creacion del chapetedere
+    sf::RectangleShape chapde(sf::Vector2f(120, 80.f));
+    chapde.setFillColor(sf::Color::Magenta);
+    chapde.setSize(sf::Vector2f(54, 54));
+    chapde.setPosition(430, 174);
+
     //creacion de la nariz 
-    sf::RectangleShape rectangle(sf::Vector2f(200.f, 80.f));
-    rectangle.setFillColor(sf::Color::Cyan);//color
-    rectangle.setPosition(80.f, 2.f);//posicion 80 es de la izquierda y 2 es de arriba
-    rectangle.move(5.f, 5.f);
-    sf::Vector2f position = rectangle.getPosition();
+    sf::CircleShape nariz(60, 4);
+    nariz.setFillColor(sf::Color::Yellow);
+    nariz.setPosition(258, 207);
+    nariz.setOutlineThickness(5);//grosor
+    nariz.setOutlineColor(sf::Color(250, 150, 100));
+
+    //creacion del pelitobase
+    sf::RectangleShape pelito(sf::Vector2f(30, 15.f));
+    pelito.setFillColor(sf::Color::Black);//color
+    pelito.setSize(sf::Vector2f(100, 30)); //tamaño,30 es el tamaño de ancho y 50 es el tamaño de largo 
+    pelito.setPosition(250, 29); //300 es par la posicion de la izquierda(vertical), 29 es de altura
+
+    //creacion del pelito.1
+    sf::RectangleShape pelito1(sf::Vector2f(30, 15.f));
+    pelito1.setFillColor(sf::Color::Black);
+    pelito1.setSize(sf::Vector2f(70, 20));
+    pelito1.setPosition(280, 10); 
+
+    //creacion del pelito.2
+    sf::RectangleShape pelito2(sf::Vector2f(30, 15.f));
+    pelito2.setFillColor(sf::Color::Black);
+    pelito2.setSize(sf::Vector2f(40, 30));
+    pelito2.setPosition(310, 0);
+
+    //creacion de la alita izquierda
+    sf::CircleShape alitaizq(80, 3);
+    alitaizq.setPosition(174, 225);//posicion
+    alitaizq.setFillColor(sf::Color::Yellow);//color de relleno
+    alitaizq.setOutlineThickness(3);//grosor
+    alitaizq.setOutlineColor(sf::Color(250, 150, 100));//color del grosor
+    alitaizq.rotate(54);//rotacion de figura
+
+    //sf::RectangleShape line(sf::Vector2f(125, 8));
+    //line.setPosition(98, 300);
+    //line.setFillColor(sf::Color::Yellow);
+    //line.setOutlineThickness(3);
+    //line.setOutlineColor(sf::Color(250, 150, 100));
+    //line.rotate(10);
+
+    //creacion de las alitas1
+    //sf::RectangleShape line1(sf::Vector2f(106, 8));
+    //line1.setPosition(227, 330);
+    //line1.setFillColor(sf::Color::Yellow);
+    //line1.setOutlineThickness(3);
+    //line1.setOutlineColor(sf::Color(250, 150, 100));
+    //line1.rotate(140);
+
+    //creacion de la alita derecha
+    sf::CircleShape alitader(80, 3); //tamaño
+    alitader.setPosition(552, 420);//posicion
+    alitader.setFillColor(sf::Color::Yellow);//color de relleno
+    alitader.setOutlineThickness(3);//grosor
+    alitader.setOutlineColor(sf::Color(250, 150, 100));//color del grosor
+    alitader.rotate(183);//rotacion de figura
+    
+
 
     //creacion de gameloop
     while (window.isOpen())
     {
-        //limpiar la ventana
-        window.clear(sf::Color::White);
         //aqui se podria colocar las posiciones de las figuras
-        
+
         sf::Event event;
         while (window.pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-   
+
         window.clear();
+        //limpiar la ventana
+        window.clear(sf::Color::White);
+
 
         //dibujar en la ventana
         window.draw(face);
-        window.draw(ojoizq);
+        window.draw(chapiz);
+        window.draw(rectangleizq);
+        window.draw(chapde);
+        window.draw(rectangledere);        
+        window.draw(ojoizq);       
         window.draw(ojodere);
-        window.draw(rectangle);
-
+        window.draw(nariz);
+        window.draw(pelito);
+        window.draw(pelito1);
+        window.draw(pelito2);
+        //window.draw(line);
+        window.draw(alitaizq);
+        window.draw(alitader);
         //mostrar en pantalla
         window.display();
     }
 
     return 0;
 }
-
-
-
-
-
-
-MI PROGRAMA DEL POLLO:
